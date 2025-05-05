@@ -5,7 +5,8 @@ import DisplayGraph from './displayGraph.component.jsx';
 import SelectCity from './selectCity.component.jsx';
 import DisplayGraphZone from './displayGraphZone.component.jsx';
 import ComparisonData from './comparisonData.component.jsx';
-
+import '../style/dataType.css';
+import '../style/app.css';
 
 const App = () => {
 
