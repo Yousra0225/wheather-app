@@ -19,6 +19,10 @@ const App = () => {
   const selectedCityData = meteoDataByCity.find(item => item.city === selectedCity);
   const selectedFavoriteCityData = meteoDataByCity.find(item => item.city === favoriteCity);
   
+  // Mettre à jour  les données de la ville sélectionnée 
+  useEffect(() => {
+    setCityData(selectedCityData);
+  }, [selectedCity]);
 };
 
 export default App;
