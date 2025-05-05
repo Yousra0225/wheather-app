@@ -1,0 +1,9 @@
+.favorite-button {
+    color: grey;
+    padding: 5px; 
+  }
+  
+  .favorite-button.selected {
+    color: yellow; 
+  }
+  
