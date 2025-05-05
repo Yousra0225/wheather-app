@@ -29,5 +29,45 @@ const ComparisonData = ({ cityData, favoriteCityData }) => {
 
     return avg;
   };
+
+  /* Calculer les moyennes pour chaque ville*/
+  const avgCity = calculateAverage(cityData.data);
+  const avgFavoriteCity = calculateAverage(favoriteCityData.data);
+
+  return (
+    <div>
+      <h2>Comparaison des Données Météorologiques</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ville</th>
+            <th>Température Min (°C)</th>
+            <th>Température Max (°C)</th>
+            <th>Précipitations (mm)</th>
+            <th>Ensoleillement (heures)</th>
+            <th>Jours de Gel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{cityData.city}</td>
+            <td>{avgCity.temp_min.toFixed(1)}</td>
+            <td>{avgCity.temp_max.toFixed(1)}</td>
+            <td>{avgCity.pluviometrie.toFixed(1)}</td>
+            <td>{avgCity.ensoleillement.toFixed(1)}</td>
+            <td>{avgCity.jours_gel.toFixed(1)}</td>
+          </tr>
+          <tr>
+            <td>{favoriteCityData.city}</td>
+            <td>{avgFavoriteCity.temp_min.toFixed(1)}</td>
+            <td>{avgFavoriteCity.temp_max.toFixed(1)}</td>
+            <td>{avgFavoriteCity.pluviometrie.toFixed(1)}</td>
+            <td>{avgFavoriteCity.ensoleillement.toFixed(1)}</td>
+            <td>{avgFavoriteCity.jours_gel.toFixed(1)}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
 }
 export default ComparisonData;
