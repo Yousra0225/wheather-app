@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+  margin: 50px;
+}
+
+select {
+  font-size: larger;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50 px ;
+}
+
+th, td {
+  border: 2px solid #1c302b;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ffb0b0;
+}
