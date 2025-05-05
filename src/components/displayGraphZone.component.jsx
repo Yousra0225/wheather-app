@@ -11,6 +11,11 @@ const DisplayGraphZone = ({ selectedCity, defaultDataType, favoriteCity }) => {
   const toggleGraph = () => {
     setGraphVisible(!graphVisible);
   }
+
+  const handleDataTypeChange = (newDataType) => {
+    setDataType(newDataType);
+    setChangeDataClicked(true); 
+  }
 }
 
 export default DisplayGraphZone;
