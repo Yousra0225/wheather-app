@@ -27,7 +27,18 @@ const App = () => {
   useEffect(() => {
     setFavoriteCityData(selectedFavoriteCityData);
   }, [favoriteCity]);
-  
+
+  /** Fonction pour gérer le changement de ville
+   * @param {string} newCity - Nouvelle ville sélectionnée
+   * @returns {void}
+   */
+  const handleCityChange = (newCity) => {
+    setSelectedCity(newCity);
+  }
+  const handleFavorite = (city) => {
+    setFavoriteCity(city);
+  }
+
 };
 
 export default App;
