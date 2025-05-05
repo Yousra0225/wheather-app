@@ -23,6 +23,11 @@ const App = () => {
   useEffect(() => {
     setCityData(selectedCityData);
   }, [selectedCity]);
+
+  useEffect(() => {
+    setFavoriteCityData(selectedFavoriteCityData);
+  }, [favoriteCity]);
+  
 };
 
 export default App;
