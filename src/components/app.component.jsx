@@ -39,6 +39,16 @@ const App = () => {
     setFavoriteCity(city);
   }
 
+  return (
+    <div className="container">
+      <h1>Données Météorologiques pour la ville de {selectedCity}</h1>
+      <SelectCity oneCity={handleCityChange} meteoDataByCity={meteoDataByCity}  favoriteCity={favoriteCity} onToggleFavorite={handleFavorite}/>
+      <DisplayDataCity cityData={cityData} />
+      <ComparisonData cityData={cityData} favoriteCityData={favoriteCityData}/>
+      <DisplayGraphZone selectedCity={selectedCity} defaultDataType={defaultDataType} />
+    </div>
+  );
+
 };
 
 export default App;
