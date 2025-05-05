@@ -66,5 +66,54 @@ const DisplayGraph = ({ selectedCity, dataType, changeDataClicked, dataFavoriteC
     ]
   };
 };
-}
+  const [chartData, setChartData] = useState(buildData(dataType));
+    
+  /* Mettre à jour le graphique */
+  useEffect(() => {
+    if (changeDataClicked || chartData === null) {
+      setChartData(buildData(dataType));
+    }
+  }, [dataType, changeDataClicked,selectedCity,dataFavoriteCity, favoriteCity]);
+
+
+
+  /**
+   * spécifier que l'axe y du graphique doit démarrer à zéro,  ainsi la représentation des données.
+   */
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  };
+
+  return (
+    <div>
+      <Bar data={chartData} options={options} />
+    </div>
+  );
+  };
+
+  /**
+   * Renvoie l'étiquette appropriée en fonction du type de données.
+   * @param {String} dataType -type de donnees
+   * @returns {string} etiquette appropriée à ce type
+   */
+  const getLabel = (dataType, selectedCity) => {
+  switch(dataType) {
+    case 'temp_min':
+      return 'Température Minimale (°C)';
+    case 'temp_max':
+      return 'Température Maximale (°C)';
+    case 'pluviometrie':
+      return 'Précipitations (mm)';
+    case 'ensoleillement':
+      return 'Ensoleillement (heures)' ;
+    case 'jours-gel':
+      return 'Jours de gel';
+    default:
+      return '';
+  }
+};
 export default DisplayGraph;
