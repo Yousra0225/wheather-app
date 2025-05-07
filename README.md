@@ -1,9 +1,13 @@
 
 ## Introduction
 ![logo](src/assets/images/exemple.png)
-This project is a `React` app that shows weather data for different cities.  
-You can choose a city, see its weather info, and set one city as your favorite.  
+Ce projet s'agit d'une application en `React` qui affiche les données météo de plusieurs villes.  
+L'utilisateur peut choisir une ville, voir ses informations météo et définir une ville favorite, Les données méteorologiques sont affichées en format tableau et en format graphique 
 ## Technologies utilisée
+- React  
+- Webpack  
+- Node.js / NPM  
+- HTML / CSS / JavaScript 
 ## Démarrage du projet
 ### 1. Cloner le dépôt
 ### 2. Installer les dépendances
